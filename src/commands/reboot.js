@@ -3,7 +3,6 @@
 const chalk   = require('chalk');
 const _       = require('lodash');
 const shell   = require('shelljs');
-const kexec   = require('kexec');
 const console = require('../console');
 
 module.exports = {
@@ -17,8 +16,9 @@ module.exports = {
     },
 
     action: function (args, done) {
-        this.console.notice('Rebooting... [any running servers will need to be restarted individually]');
-        kexec('fractal', ['--reboot']);
+       // this.console.notice('Rebooting... [any running servers will need to be restarted individually]');
+        this.console.notice('NOT Supported');
+        //kexec('fractal', ['--reboot']);
         done();
     }
 
